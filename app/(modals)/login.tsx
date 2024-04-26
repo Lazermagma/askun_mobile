@@ -9,7 +9,7 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-
+import { Feather } from "@expo/vector-icons";
 import { useWarmUpBrowser } from "@/hooks/useWarmUpBrowser";
 import { defaultStyles } from "@/constants/Styles";
 
@@ -79,11 +79,7 @@ const Page = () => {
 
       <View style={{ gap: 20 }}>
         <TouchableOpacity style={styles.btnOutline}>
-          <Ionicons
-            name="mail-outline"
-            size={24}
-            style={defaultStyles.btnIcon}
-          />
+          <Feather name="phone" size={24} style={defaultStyles.btnIcon} />
           <Text style={styles.btnOutlineText}>Continue with Phone</Text>
         </TouchableOpacity>
 
