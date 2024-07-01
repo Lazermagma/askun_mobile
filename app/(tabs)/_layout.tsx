@@ -7,6 +7,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
+
 const Layout = () => {
   return (
     <Tabs
@@ -18,29 +20,30 @@ const Layout = () => {
       }}
     >
       <Tabs.Screen
+        name="cart"
+        options={{
+          tabBarLabel: "Cart",
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="shoppingcart" size={size} color={color} />
+          ),
+          headerTitle: "Cart",
+        }}
+      />
+      <Tabs.Screen
         name="index"
         options={{
           tabBarLabel: "Explore",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="search" color={color} size={size} />
+            <FontAwesome name="compass" size={size} color={color} />
           ),
+          headerTitle: "Explore",
         }}
       />
 
       <Tabs.Screen
-        name="wishlists"
+        name="Shop"
         options={{
-          tabBarLabel: "Wishlists",
-          tabBarIcon: ({ color, size }) => (
-            <Feather name="heart" color={color} size={size} />
-          ),
-        }}
-      />
-
-      <Tabs.Screen
-        name="properties"
-        options={{
-          tabBarLabel: "Properties",
+          tabBarLabel: "Shop",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="building" color={color} size={size} />
           ),
@@ -48,19 +51,19 @@ const Layout = () => {
       />
 
       <Tabs.Screen
-        name="inbox"
+        name="Ask Askun"
         options={{
-          tabBarLabel: "Inbox",
+          tabBarLabel: "Ask Askun",
           tabBarIcon: ({ color, size }) => (
-            <Octicons name="inbox" color={color} size={size} />
+            <MaterialCommunityIcons name="robot" size={size} color={color} />
           ),
         }}
       />
 
       <Tabs.Screen
-        name="profile"
+        name="My Account"
         options={{
-          tabBarLabel: "Profile",
+          tabBarLabel: "My Account",
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="face-man-profile"

@@ -3,16 +3,11 @@ import React from "react";
 import { Stack } from "expo-router";
 import ExploreHeader from "@/components/ExploreHeader";
 import Listings from "@/components/Listings";
-
+import { WebView } from "react-native-webview";
 const Page = () => {
   return (
     <View style={{ flex: 1 }}>
-      <Stack.Screen
-        options={{
-          header: () => <ExploreHeader />,
-        }}
-      />
-      <Listings />
+      <WebView source={{ uri: "https://askunv2.netlify.app/#/" }} />
     </View>
   );
 };

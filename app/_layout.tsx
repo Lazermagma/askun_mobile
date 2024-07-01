@@ -66,16 +66,16 @@ function RootLayoutNav() {
   const { isLoaded, isSignedIn } = useAuth();
   const router = useRouter();
 
-  // Automatically open login if user is not authenticated
-  useEffect(() => {
-    if (isLoaded && !isSignedIn) {
-      router.push("/(modals)/login");
-    }
-  }, [isLoaded]);
+  // // Automatically open login if user is not authenticated
+  // useEffect(() => {
+  //   if (isLoaded && !isSignedIn) {
+  //     router.push("/(modals)/login");
+  //   }
+  // }, [isLoaded]);
 
   return (
     <Stack>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="(modals)/login"
         options={{
           presentation: "modal",
@@ -89,10 +89,10 @@ function RootLayoutNav() {
             </TouchableOpacity>
           ),
         }}
-      />
+      /> */}
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="listing/[id]" options={{ headerTitle: "" }} />
-      <Stack.Screen
+      {/* <Stack.Screen name="listing/[id]" options={{ headerTitle: "" }} /> */}
+      {/* <Stack.Screen
         name="(modals)/booking"
         options={{
           presentation: "transparentModal",
@@ -114,7 +114,7 @@ function RootLayoutNav() {
             </TouchableOpacity>
           ),
         }}
-      />
+      /> */}
     </Stack>
   );
 }
